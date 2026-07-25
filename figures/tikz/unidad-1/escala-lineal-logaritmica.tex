@@ -1,0 +1,44 @@
+% Propósito: comparar la separación espacial de razones en una escala lineal
+% con la separación uniforme de sus logaritmos.
+% Origen: L_Q=10 log10(Q/Q0), para Q/Q0=1,10,100,1000.
+% Descripción accesible: en una escala lineal de cero a mil, las razones 1 y 10
+% quedan casi superpuestas cerca del origen y 100 permanece en la primera
+% décima parte. En la representación logarítmica, 1, 10, 100 y 1000 quedan
+% igualmente espaciados y corresponden a 0, 10, 20 y 30 dB.
+\begin{tikzpicture}[font=\small,>=stealth,x=1cm,y=1cm]
+    \node[anchor=west,font=\bfseries] at (0,2.65) {Escala lineal};
+    \draw[->,thick] (0,1.6) -- (10.45,1.6);
+    \foreach \x/\etiqueta in {0/0,1/100,5/500,10/1000}{
+        \draw (\x,1.48) -- (\x,1.72);
+        \node[below] at (\x,1.45) {\etiqueta};
+    }
+    \node[anchor=east] at (10,2.65) {razón \(Q/Q_0\) (adimensional)};
+    \fill (0.01,1.6) circle (1.5pt);
+    \fill (0.1,1.6) circle (1.5pt);
+    \fill (1,1.6) circle (1.5pt);
+    \fill (10,1.6) circle (1.5pt);
+    \draw[->] (1.3,2.2) -- (0.06,1.72);
+    \node[anchor=west,align=left] at (1.3,2.2)
+        {\(1\) y \(10\): casi coinciden\\a esta escala};
+
+    \node[anchor=west,font=\bfseries,align=left] at (0,0.15)
+        {Representación\\logarítmica};
+    \draw[->,thick] (0,-1.0) -- (10.45,-1.0);
+    \foreach \x/\razon/\nivel in {
+        0/1/0,
+        3.333/10/10,
+        6.666/100/20,
+        10/1000/30
+    }{
+        \draw (\x,-1.12) -- (\x,-0.88);
+        \node[above] at (\x,-0.85) {\(\razon\)};
+        \node[below] at (\x,-1.15) {\(\nivel\,\text{dB}\)};
+    }
+    \node[anchor=east] at (10,0.15) {razón \(Q/Q_0\)};
+    \node[below] at (5,-1.75) {nivel \(L_Q=10\log_{10}(Q/Q_0)\)};
+
+    \foreach \x in {0,3.333,6.666}{
+        \draw[->] (\x+0.35,-0.55) -- (\x+2.98,-0.55)
+            node[midway,above]{\(\times10\)};
+    }
+\end{tikzpicture}
