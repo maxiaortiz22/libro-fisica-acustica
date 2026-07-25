@@ -49,6 +49,19 @@ El libro debe cubrir las diez unidades del programa:
 
 Antes de ampliar una sección, consultar el mapa curricular y revisar el capítulo anterior y el siguiente para evitar repeticiones, anticipaciones innecesarias o contradicciones.
 
+## Hoja de ruta de revisión
+
+Antes de revisar, corregir, ampliar o reestructurar una unidad, consultar `docs/revision-roadmap.md` para respetar:
+
+- la cobertura obligatoria del programa;
+- las dependencias y fronteras temáticas entre unidades;
+- la ubicación acordada para introducir, recordar o aplicar cada concepto;
+- las repeticiones que deben resolverse mediante referencias cruzadas;
+- las figuras recomendadas;
+- el estado de diagnóstico, edición, figuras, ejercicios, validación y revisión final.
+
+Cuando una tarea complete o cambie alguna de esas etapas, actualizar también el registro de estado de `docs/revision-roadmap.md` dentro del mismo cambio.
+
 ## Público y enfoque pedagógico
 
 - Asumir conocimientos matemáticos iniciales, pero no ausencia total de razonamiento científico.
@@ -76,6 +89,8 @@ Mantener separadas, entre otras, las siguientes magnitudes y nociones:
 - audición por vía aérea y mecanismos de conducción ósea.
 
 No usar expresiones como “la amplitud es el volumen”, “los decibeles miden la intensidad” o “el oído funciona de manera logarítmica” sin las precisiones necesarias.
+
+Expresar por defecto en grados Celsius (`°C`) las temperaturas ambientales y los ejemplos didácticos del libro. Reservar kelvin (`K`, sin símbolo de grado) para temperaturas absolutas y ecuaciones termodinámicas que lo requieran. No denominar “kelvin” a un valor expresado en `°C`.
 
 Ver las convenciones recomendadas en:
 
