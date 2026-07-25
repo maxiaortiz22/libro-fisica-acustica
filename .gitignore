@@ -1,4 +1,5 @@
 build/
+.vscode/
 
 # LaTeX auxiliary files
 *.aux
