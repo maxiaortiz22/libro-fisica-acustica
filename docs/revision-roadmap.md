@@ -546,6 +546,19 @@ La siguiente asignación evita que una aplicación posterior vuelva a enseñar d
   de la figura 3.4 en la página siguiente. La inspección confirma que no genera
   un hueco anómalo, un epígrafe separado ni una dificultad de lectura.
 
+### Orden de la bibliografía según primera cita del 27-07-2026
+
+- Se sustituyó el estilo BibTeX `plain` por `unsrt` en `main.tex`. Las entradas
+  bibliográficas conservan sus mismas claves, metadatos, citas y enlaces; solo
+  cambia su orden de presentación y su numeración.
+- La reconstrucción limpia ejecutó BibTeX con `unsrt.bst` y finalizó sin errores,
+  citas o referencias indefinidas, etiquetas duplicadas, archivos faltantes ni
+  cajas `Overfull`. Persisten los seis avisos `Underfull \vbox` ya inspeccionados.
+- La comprobación de la secuencia completa confirmó que las 56 claves únicas,
+  en el orden de su primera `\cite{...}`, coinciden exactamente con las 56
+  entradas `\bibitem` de la bibliografía. La primera cita (`bipmSI2026`) recibe
+  el número `[1]` y abre la lista bibliográfica.
+
 ## Pendientes documentales globales
 
 - Decidir si se incorporará al repositorio una copia versionada del programa oficial ya cotejado o un registro documental equivalente.
