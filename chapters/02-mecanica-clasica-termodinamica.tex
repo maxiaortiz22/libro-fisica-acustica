@@ -344,7 +344,7 @@ Describir la entropía únicamente como ``desorden'' resulta insuficiente: no pe
 \subsection{Compresión del aire y velocidad del sonido}
 \label{sec:u2-temperatura-velocidad}
 
-Una onda sonora en aire produce pequeñas compresiones y rarefacciones alrededor del estado de equilibrio. La compresión tiende a aumentar la presión y la temperatura locales; la expansión produce el cambio opuesto. \verify{En el modelo acústico lineal usual, estas variaciones son suficientemente rápidas y pequeñas como para aproximar cada ciclo local como un proceso adiabático, es decir, con intercambio de calor despreciable durante ese intervalo.}
+Una onda sonora en aire produce pequeñas compresiones y rarefacciones alrededor del estado de equilibrio. La compresión tiende a aumentar la presión y la temperatura locales; la expansión produce el cambio opuesto. En el modelo acústico lineal usual, estas variaciones son suficientemente rápidas y pequeñas como para aproximar cada ciclo local como un proceso adiabático, es decir, con intercambio de calor despreciable durante ese intervalo~\cite{xiangBlauert2021}.
 
 La velocidad de propagación no es la velocidad local de las partículas del aire. Se representará mediante \(c\) y se medirá en metros por segundo (\(\text{m}/\text{s}\)). Para un gas ideal bajo el modelo adiabático, sean:
 
@@ -355,7 +355,7 @@ La velocidad de propagación no es la velocidad local de las partículas del air
     \item \(M\), la masa molar del gas, medida en kilogramos por mol (\(\text{kg}/\text{mol}\)).
 \end{itemize}
 
-\verify{Bajo esas hipótesis, la velocidad de propagación se modela mediante}
+Bajo esas hipótesis, la velocidad de propagación se modela mediante~\cite{cramer1993,xiangBlauert2021}
 
 \begin{equation}
     c=\sqrt{\frac{\gamma RT}{M}}.
@@ -364,7 +364,7 @@ La velocidad de propagación no es la velocidad local de las partículas del air
 
 Si la composición del gas se mantiene constante, la ecuación~\eqref{eq:u2-velocidad-gas} muestra que \(c\) aumenta con la raíz cuadrada de la temperatura absoluta. La densidad por sí sola no determina la velocidad: también importa la respuesta elástica del medio.
 
-\verify{Para aire seco y temperaturas cercanas a las ambientales puede utilizarse, como aproximación didáctica,}
+Para aire seco y temperaturas cercanas a las ambientales puede utilizarse, como aproximación didáctica~\cite{cramer1993,xiangBlauert2021},
 
 \begin{equation}
     c\approx
@@ -422,11 +422,11 @@ Los modelos de esta unidad permiten organizar aplicaciones posteriores sin reemp
 \begin{description}
     \item[\textbf{Membrana timpánica:}] una diferencia de presión puede ejercer una fuerza sobre su superficie. Su respuesta mecánica puede analizarse cualitativamente mediante inercia, elasticidad y amortiguamiento, sin reducir la membrana real a una masa puntual.
 
-    \item[\textbf{Cadena osicular:}] \verify{el oído medio funciona como un sistema mecánico pasivo que contribuye a la adaptación entre la impedancia del aire y la del oído interno. Puede transformar las relaciones entre presión, fuerza, velocidad y desplazamiento, pero no crea energía.} Su mecánica se desarrollará en una unidad posterior.
+    \item[\textbf{Cadena osicular:}] el oído medio funciona como un sistema mecánico pasivo que contribuye a la adaptación entre la impedancia del aire y la del oído interno. Puede transformar las relaciones entre presión, fuerza, velocidad y desplazamiento, pero no crea energía~\cite{ugarteburu2022}. Su mecánica se desarrollará en una unidad posterior.
 
-    \item[\textbf{Vibrador óseo:}] \verify{un vibrador óseo aplica una fuerza variable al cráneo y pone en movimiento un sistema formado por el transductor, el punto de contacto y las estructuras de la cabeza. La audición por vía ósea resulta de varios mecanismos y no de una única onda que recorra el hueso.} Estos mecanismos se estudiarán junto con el sistema auditivo.
+    \item[\textbf{Vibrador óseo:}] un vibrador óseo aplica una fuerza variable al cráneo y pone en movimiento un sistema formado por el transductor, el punto de contacto y las estructuras de la cabeza. La audición por vía ósea resulta de varios mecanismos y no de una única onda que recorra el hueso~\cite{stenfeltGoode2005}. Estos mecanismos se estudiarán junto con el sistema auditivo.
 
-    \item[\textbf{Disipación en tejidos:}] \verify{los tejidos biológicos presentan comportamiento viscoelástico: parte de la energía mecánica puede almacenarse de manera elástica y parte puede disiparse como energía interna.} El modelo masa--resorte--amortiguador permite representar esta diferencia de manera introductoria.
+    \item[\textbf{Disipación en tejidos:}] los tejidos biológicos presentan comportamiento viscoelástico: parte de la energía mecánica puede almacenarse de manera elástica y parte puede disiparse como energía interna~\cite{fung1981}. El modelo masa--resorte--amortiguador permite representar esta diferencia de manera introductoria.
 
     \item[\textbf{Propagación en aire:}] la compresibilidad y la inercia del aire permiten la propagación, mientras que su estado termodinámico influye en la velocidad. La absorción atmosférica, los gradientes y la propagación en exteriores se tratarán en la unidad correspondiente.
 \end{description}
