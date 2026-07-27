@@ -40,8 +40,8 @@ mediciones sonométricas. Al finalizar, se espera que el estudiante pueda:
 \section{Conocimientos previos}
 \label{sec:u5-conocimientos-previos}
 
-El capítulo~\ref{chap:unidad-3} introdujo período, frecuencia, fase,
-sinusoides y superposición. El capítulo~\ref{chap:unidad-4} definió presión
+La Unidad~\ref{chap:unidad-3} introdujo período, frecuencia, fase,
+sinusoides y superposición. La Unidad~\ref{chap:unidad-4} definió presión
 acústica, valor eficaz, señal compleja y niveles logarítmicos. En particular,
 conviene recordar que:
 
@@ -139,7 +139,6 @@ independientes. Es una forma de describir y calcular propiedades de la señal.
 
 \subsection{Serie de Fourier}
 \label{sec:u5-serie-fourier}
-\label{fourier}
 
 Para una señal periódica \(x(t)\) con período fundamental \(T_0\), una forma
 trigonométrica de la serie de Fourier es
@@ -290,7 +289,6 @@ muestreo, la ventana y el método de estimación.
 
 \subsection{Ventanas, fuga espectral y espectrograma}
 \label{sec:u5-ventanas-espectrograma}
-\label{espectrograma}
 
 Al recortar una señal se multiplica implícitamente por una ventana temporal.
 Si el registro no contiene un número entero de períodos, la energía asociada
@@ -381,11 +379,10 @@ mediante
 
 No corresponde promediar aritméticamente los decibeles. Tampoco deben sumarse
 amplitudes sin considerar fase cuando las componentes son coherentes, tal como
-se estudió en el capítulo~\ref{chap:unidad-4}.
+se estudió en la Unidad~\ref{chap:unidad-4}.
 
 \section{Espectro de una señal y respuesta de un sistema}
 \label{sec:u5-espectro-respuesta}
-\label{rta_freq_vocal}
 
 El \textbf{espectro de una señal} describe la distribución frecuencial de un
 registro particular. Si se graba una vocal, el espectro depende de la fuente,
@@ -480,7 +477,6 @@ del sistema en otras frecuencias.
 
 \section{Componentes espectrales}
 \label{sec:u5-componentes}
-\label{armonicos}
 
 \begin{description}[style=nextline]
     \item[\textbf{Frecuencia fundamental (\(f_0\)):}]
@@ -681,7 +677,6 @@ sus anchos absolutos en hertz, en cambio, no son iguales.
 
 \section{Filtros y respuesta en frecuencia}
 \label{sec:u5-filtros}
-\label{filtros}
 
 Un filtro es un sistema que modifica componentes de una señal según la
 frecuencia. Un filtro \textbf{ideal} cambia abruptamente entre paso y rechazo.
@@ -764,7 +759,6 @@ específicas.
 
 \section{Ponderaciones frecuenciales A, C y Z}
 \label{sec:u5-ponderaciones}
-\label{ponderacion}
 
 Una ponderación frecuencial es una respuesta de medición definida en función
 de la frecuencia. Si \(L_Z(f)\) es el nivel de un tono medido con ponderación
@@ -853,17 +847,18 @@ después de las conversiones, ponderaciones e integraciones elegidas.
 \subsection{Nivel equivalente}
 \label{sec:u5-leq}
 
-Sea \(p_F(t)\) la presión acústica después de aplicar una ponderación
-frecuencial \(F\), medida en pascales, durante un intervalo \(T\), medido en
-segundos. El nivel equivalente es
+Sea \(p_X(t)\) la presión acústica después de aplicar una ponderación
+frecuencial \(X\), medida en pascales, durante un intervalo \(T\), medido en
+segundos. La letra \(X\) identifica la ponderación frecuencial, por ejemplo A,
+C o Z. El nivel equivalente es
 
 \begin{equation}
-    L_{F\mathrm{eq},T}
+    L_{X\mathrm{eq},T}
     =10\log_{10}
     \left[
         \frac{1}{T}
         \int_0^T
-        \frac{p_F^2(t)}{p_\mathrm{ref}^{\,2}}\,dt
+        \frac{p_X^2(t)}{p_\mathrm{ref}^{\,2}}\,dt
     \right],
     \label{eq:u5-leq}
 \end{equation}
@@ -882,10 +877,12 @@ asociadas con F (\emph{Fast}) y S (\emph{Slow}) son
 \(0{,}125\,\text{s}\) y \(1\,\text{s}\), respectivamente; su definición
 exacta y tolerancias deben documentarse con la norma aplicable.}
 
-Un nivel máximo \(L_{F\max}\) es el mayor valor alcanzado por un nivel con una
-ponderación frecuencial y temporal especificadas. Un nivel de pico se obtiene
-mediante un detector de pico y no debe confundirse con \(L_{F\max}\) ni con
-una indicación denominada \emph{Impulse}.
+Un nivel máximo \(L_{XY\max}\) es el mayor valor alcanzado por un nivel con una
+ponderación frecuencial \(X\) y una ponderación temporal \(Y\) especificadas;
+por ejemplo, \(L_{AF\max}\) combina ponderación A y respuesta temporal
+\emph{Fast}. Un nivel de pico se obtiene mediante un detector de pico y no
+debe confundirse con \(L_{XY\max}\) ni con una indicación denominada
+\emph{Impulse}.
 
 \subsection{Verificación del instrumento y ruido de fondo}
 \label{sec:u5-verificacion-sonometro}
@@ -1619,7 +1616,7 @@ informar magnitud, ponderaciones y tiempo de medición.
     \item[\textbf{Frecuencia fundamental (\(f_0\)):}]
     inversa del período fundamental de una señal periódica.
 
-    \item[\textbf{Nivel equivalente (\(L_{F\mathrm{eq},T}\)):}]
+    \item[\textbf{Nivel equivalente (\(L_{X\mathrm{eq},T}\)):}]
     nivel constante que posee la misma media cuadrática que la señal ponderada
     durante el intervalo \(T\).
 
