@@ -12,6 +12,17 @@
 \usepackage{csquotes}
 \usepackage{array}
 
+% Reserva espacio suficiente para capítulos y subsecciones de dos dígitos
+% en el índice, sin alterar la numeración ni los títulos.
+\makeatletter
+\patchcmd{\l@chapter}
+  {\setlength\@tempdima{1.5em}}
+  {\setlength\@tempdima{2.0em}}
+  {}{}
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{3.2em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{4.2em}}
+\makeatother
+
 \usepackage{tikz}
 \usetikzlibrary{babel}
 
