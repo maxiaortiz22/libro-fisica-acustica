@@ -473,10 +473,82 @@ La siguiente asignación evita que una aplicación posterior vuelva a enseñar d
 - La publicación académica no queda aprobada todavía: el proyecto no posee sistema bibliográfico, archivos `.bib` ni órdenes de cita, y conserva 199 bloques activos `\verify{...}`. Después de incorporar y verificar las fuentes debe repetirse la validación completa.
 - Como mejoras no bloqueantes se registraron los metadatos PDF vacíos, dos cuadros no numerados de la Unidad 10, formas tipográficas equivalentes para dB SPL/HL/SL, dos alias heredados de figuras de la Unidad 8 y la conveniencia de homogeneizar las tablas.
 
+### Revisión bibliográfica y documental integral del 27-07-2026
+
+- Se incorporó un sistema bibliográfico BibTeX nativo, compatible con el motor
+  y la receta existentes, mediante `bibliography/references.bib`,
+  `\bibliographystyle{plain}` y `\bibliography{bibliography/references}`. No
+  se agregaron paquetes ni se modificó el motor.
+- Se evaluaron los 199 bloques activos `\verify{...}` y se distinguieron de
+  las tres apariciones impresas con `\verb`. Los 199 bloques quedaron
+  resueltos y respaldados.
+- El cierre por unidad es:
+
+| Unidad | Bloques iniciales | Resueltos | Pendientes | Fuentes principales |
+|---:|---:|---:|---:|---|
+| 1 | 5 | 5 | 0 | BIPM SI 2026; NIST SP 811; Cramer; ISO 389-1; ISO 8253-1 |
+| 2 | 6 | 6 | 0 | Xiang y Blauert; Cramer; Ugarteburu et al.; Stenfelt y Goode; Fung |
+| 3 | 4 | 4 | 0 | Oxenham; Xiang y Blauert; Möser; ASHA; ISO 8253-1 |
+| 4 | 18 | 18 | 0 | Xiang y Blauert; NIST; ISO 1683; ISO 389-1; ISO 8253-2 |
+| 5 | 11 | 11 | 0 | Oxenham; ISO 226; IEC 61260-1; serie IEC 61672; ANSI/ASA S3.1 |
+| 6 | 27 | 27 | 0 | Carlini et al.; Ugarteburu et al.; Schilder et al.; Stenfelt y Goode; Fettiplace |
+| 7 | 23 | 23 | 0 | ISO 226; Oxenham; Glasberg y Moore; Litovsky et al.; IEC 60268-16 |
+| 8 | 70 | 70 | 0 | ASHA; Ryan et al.; NIOSH; Gates y Mills; NIDCD; OMS |
+| 9 | 24 | 24 | 0 | Xiang y Blauert; Möser; Fahy y Gardonio; ISO 9613-1; ISO 3382-2; ISO 10140-2 |
+| 10 | 11 | 11 | 0 | ISO 389-4; IEC 60645-1; NIOSH; OMS; normativa argentina; ISO 4869-2 |
+
+- El acceso posterior al texto completo de IEC 61672-1:2013 permitió verificar
+  en su tabla 3 el valor nominal `A(63 Hz)=-26,2 dB` y en el apartado 5.8.1 las
+  constantes exponenciales objetivo de diseño de `0,125 s` para F y `1 s` para
+  S. IEC 61672-2:2013, apartado 9.11, se utilizó para precisar el procedimiento
+  de ensayo por tasas de decaimiento. Se retiraron las dos últimas marcas
+  activas.
+- Se precisaron dos formulaciones relevantes: el SI quedó descrito conforme a
+  las siete constantes definitorias de la edición vigente, y la constante
+  `-47 dB` de la ley de masas quedó limitada a una aproximación de incidencia
+  difusa media.
+- La matriz individual, las ediciones normativas, las discrepancias y el
+  resultado de validación se registran en
+  [`docs/bibliographic-verification-report.md`](bibliographic-verification-report.md).
+- La compilación limpia con la receta oficial finalizó correctamente: 296
+  páginas, 56 entradas bibliográficas utilizadas y ninguna cita o referencia
+  indefinida, clave ausente, etiqueta duplicada, figura faltante, caja
+  `Overfull` ni error LaTeX. Persisten cinco avisos de composición
+  `Underfull \vbox` visualmente aceptables.
+- Se inspeccionaron mosaicos de las 296 páginas y, en detalle, las páginas
+  modificadas 135--137 y las páginas 291--296 de la bibliografía; no se
+  observaron cortes, superposiciones ni desbordes. El conteo final confirmó
+  cero bloques activos `\verify{...}`, cero comentarios `TODO(verify)` y tres
+  apariciones impresas mediante `\verb`.
+
+### Ajuste y revalidación de cuatro figuras de las Unidades 1 y 3 del 27-07-2026
+
+- Se ajustaron exclusivamente las fuentes TikZ del círculo trigonométrico, la
+  comparación entre escala lineal y representación logarítmica, el esquema de
+  movimiento local frente a propagación y la cadena parlante--medio. No se
+  modificaron los datos, las magnitudes, las unidades, los epígrafes, el
+  preámbulo ni los archivos generados.
+- En el círculo se separaron las etiquetas de seno, coseno, radio, ángulo y
+  coordenadas. En la comparación de escalas se asignaron franjas verticales
+  independientes a encabezados, razones, factores multiplicativos, niveles y
+  fórmula. En el esquema longitudinal se sustituyó la guía que atravesaba el
+  rótulo de propagación por una leyenda con el mismo símbolo circular. En la
+  cadena parlante--medio se redistribuyeron títulos, variables, unidades y
+  glifos dentro de cada bloque.
+- La receta oficial de `latexmk` finalizó con código 0 y produjo nuevamente
+  `build/main.pdf`, de 296 páginas. El log no contiene errores, citas o
+  referencias indefinidas, etiquetas duplicadas ni cajas `Overfull`.
+- Se inspeccionaron a resolución de página las páginas 22, 24, 63, 69 y 70.
+  Las cuatro figuras y sus epígrafes son legibles y no presentan colisiones,
+  recortes, superposiciones ni contenido fuera del área útil.
+- Permanecen los cinco avisos `Underfull \vbox` ya documentados y se agregó uno
+  de baja severidad en la página 69, causado por la distribución del flotante
+  de la figura 3.4 en la página siguiente. La inspección confirma que no genera
+  un hueco anómalo, un epígrafe separado ni una dificultad de lectura.
+
 ## Pendientes documentales globales
 
 - Decidir si se incorporará al repositorio una copia versionada del programa oficial ya cotejado o un registro documental equivalente.
-- Incorporar un sistema bibliográfico administrado y fuentes primarias para modelos, curvas, valores anatómicos, límites de exposición, normas y afirmaciones clínicas.
 - Identificar autoría, licencia, datos fuente y método de generación de las 28 imágenes actuales antes de decidir cuáles conservar.
 - Sustituir progresivamente figuras raster heterogéneas por figuras originales y reproducibles.
 - Consolidar mediante comandos globales las formas tipográficas equivalentes que todavía conviven para `dB SPL`, `dB HL`, `dB SL` y otras unidades; las magnitudes, referencias y ponderaciones ya están diferenciadas conceptualmente.

@@ -4,22 +4,24 @@
 % theta con el eje horizontal. La proyección horizontal del punto extremo mide
 % cos(theta) y la proyección vertical mide sin(theta).
 \begin{tikzpicture}[font=\small,>=stealth,scale=1.55]
-    \draw[->] (-1.35,0) -- (1.45,0) node[right]{\(x\)};
-    \draw[->] (0,-1.35) -- (0,1.45) node[above]{\(y\)};
+    \draw[->] (-1.35,0) -- (1.55,0) node[right]{\(x\)};
+    \draw[->] (0,-1.35) -- (0,1.48) node[above]{\(y\)};
     \draw[thick] (0,0) circle (1);
 
-    \coordinate (P) at (35:1);
-    \coordinate (Px) at ({cos(35)},0);
+    \coordinate (P) at (38:1);
+    \coordinate (Px) at ({cos(38)},0);
 
-    \draw[very thick] (0,0) -- node[above left]{\(1\)} (P);
+    \draw[very thick] (0,0) -- node[pos=0.55,above left=1pt]{\(1\)} (P);
     \draw[dashed] (P) -- (Px);
-    \draw[very thick] (0,0) -- node[below]{\(\cos\theta\)} (Px);
-    \draw[very thick] (Px) -- node[right]{\(\sin\theta\)} (P);
+    \draw[very thick] (0,0) --
+        node[midway,below=5pt,fill=white,inner sep=1pt]{\(\cos\theta\)} (Px);
+    \draw[very thick] (Px) --
+        node[midway,right=7pt,fill=white,inner sep=1pt]{\(\sin\theta\)} (P);
     \fill (P) circle (1.3pt);
 
-    \draw[->] (0.34,0) arc[start angle=0,end angle=35,radius=0.34];
-    \node at (0.43,0.14) {\(\theta\)};
+    \draw[->] (0.38,0) arc[start angle=0,end angle=38,radius=0.38];
+    \node at (19:0.53) {\(\theta\)};
 
-    \node[below left] at (0,0) {\(O\)};
-    \node[above right] at (P) {\((\cos\theta,\sin\theta)\)};
+    \node[below left=2pt] at (0,0) {\(O\)};
+    \node[above right=4pt] at (P) {\((\cos\theta,\sin\theta)\)};
 \end{tikzpicture}

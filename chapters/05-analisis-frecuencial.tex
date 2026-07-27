@@ -445,9 +445,9 @@ En producción vocal, una descripción introductoria considera una fuente
 glótica y un tracto vocal que actúa como sistema acústico. Los formantes se
 relacionan con resonancias del tracto y suelen observarse en la envolvente
 espectral, mientras que las líneas armónicas se relacionan con la periodicidad
-de la fuente. \verify{La interpretación de formantes y otros parámetros de voz
+de la fuente. La interpretación de formantes y otros parámetros de voz
 requiere definir la vocal, el hablante, el método de análisis y el alcance
-clínico, además de incorporar bibliografía especializada.}
+clínico, además de incorporar bibliografía especializada~\cite{brockmann2011}.
 
 \subsection{Ejemplo resuelto: ganancia a una frecuencia}
 \label{sec:u5-ejemplo-respuesta}
@@ -534,15 +534,15 @@ fundamental.
 \subsection{Infrasonido, rango audible y ultrasonido}
 \label{sec:u5-infra-audible-ultra}
 
-\verify{Se usa de manera convencional \(20\,\text{Hz}\) como frontera entre
+Se usa de manera convencional \(20\,\text{Hz}\) como frontera entre
 infrasonido y rango audible, y \(20\,\text{kHz}\) como frontera entre rango
 audible y ultrasonido; estos límites son aproximados y requieren una fuente
-académica que declare las condiciones de escucha.}
+académica que declare las condiciones de escucha~\cite{oxenham2018,iso226_2023}.
 
 El término \textbf{infrasonido} describe frecuencias inferiores a la frontera
 convencional de \(20\,\text{Hz}\). No significa que toda señal de esa región
-sea necesariamente imperceptible: \verify{la detección puede depender del
-nivel, la duración, la distorsión del sistema y la presencia de vibración.}
+sea necesariamente imperceptible: la detección puede depender del
+nivel, la duración, la distorsión del sistema y la presencia de vibración~\cite{oxenham2018,iso226_2023}.
 
 El \textbf{rango audible} no es idéntico para todas las personas ni para todos
 los niveles. La sensibilidad varía con la frecuencia y con características
@@ -588,9 +588,9 @@ sin conocer cómo se eligieron los extremos.
     el límite superior por un ``umbral de dolor'' universal.
 \end{description}
 
-\verify{Los valores numéricos de rangos vocales, instrumentales y auditivos
+Los valores numéricos de rangos vocales, instrumentales y auditivos
 deben incorporarse solo después de seleccionar fuentes, condiciones de
-medición y población de referencia.}
+medición y población de referencia~\cite{oxenham2018,iso226_2023}.
 
 \section{Bandas de octava y tercio de octava}
 \label{sec:u5-bandas}
@@ -629,9 +629,9 @@ El ancho de banda \(B\), medido en hertz, se define como
 \end{equation}
 
 Para una octava, \(b=1\) y \(f_H/f_L=2\). Para un tercio de octava,
-\(b=3\) y \(f_H/f_L=2^{1/3}\). \verify{Los instrumentos normalizados usan
+\(b=3\) y \(f_H/f_L=2^{1/3}\). Los instrumentos normalizados usan
 series de frecuencias centrales nominales y requisitos de tolerancia que deben
-documentarse con la edición aplicable de la norma de filtros de banda.}
+documentarse con la edición aplicable de la norma de filtros de banda~\cite{iec61260_1_2014}.
 
 \subsection{Ejemplo resuelto: tercio de octava}
 \label{sec:u5-ejemplo-tercio}
@@ -776,9 +776,9 @@ en una región amplia, pero tampoco es una medición sin filtro. La ponderación
 Z es una respuesta nominalmente plana dentro de un intervalo y unas
 tolerancias especificadas; no representa ``el sonido real'' sin límites.
 
-\verify{Las respuestas exactas, tolerancias, intervalo de frecuencias y
-denominaciones de A, C y Z deben verificarse contra la edición aplicable de la
-norma de sonómetros.}
+Las respuestas nominales, los límites de aceptación, el intervalo de
+frecuencias y las denominaciones de A, C y Z se especifican en la edición
+aplicable de la norma de sonómetros~\cite{iec61672_1_2013}.
 
 Para una señal de banda ancha no corresponde tomar un nivel total y agregar
 una única corrección elegida de una tabla. La ponderación actúa de manera
@@ -788,8 +788,9 @@ la integración energética.
 \subsection{Ejemplo resuelto: corrección para un tono}
 \label{sec:u5-ejemplo-ponderacion}
 
-\verify{Como dato nominal pendiente de incorporar con su fuente primaria, se
-adopta \(A(63\,\text{Hz})=-26{,}2\,\text{dB}\).} Si un tono de
+La tabla 3 de IEC 61672-1:2013 establece, como valor nominal de la
+ponderación A a \(63\,\text{Hz}\),
+\(A(63\,\text{Hz})=-26{,}2\,\text{dB}\)~\cite{iec61672_1_2013}. Si un tono de
 \(63\,\text{Hz}\) produce \(L_Z=80{,}0\,\text{dB(Z)}\), entonces
 
 \[
@@ -801,9 +802,9 @@ El cálculo se aplica a ese tono y a la corrección proporcionada. No implica
 que cualquier sonido de \(80\,\text{dB(Z)}\) produzca
 \(53{,}8\,\text{dB(A)}\).
 
-% TODO(figure,blocked-by-verify): generar las curvas A, C y Z solo después de
-% verificar sus ecuaciones, tolerancias y edición normativa. Una curva
-% aproximada podría confundirse con la respuesta nominal de un instrumento.
+% TODO(figure): evaluar una figura original de las curvas nominales A, C y Z
+% calculadas con las expresiones del anexo E de IEC 61672-1:2013; diferenciar
+% esas curvas de los límites de aceptación de un instrumento.
 
 \section{Sonómetro}
 \label{sec:u5-sonometro}
@@ -872,10 +873,12 @@ aritmético de lecturas en decibeles.
 \label{sec:u5-ponderaciones-temporales}
 
 Las ponderaciones temporales suavizan la indicación mediante una respuesta
-exponencial. \verify{En sonometría normalizada, las constantes nominales
-asociadas con F (\emph{Fast}) y S (\emph{Slow}) son
-\(0{,}125\,\text{s}\) y \(1\,\text{s}\), respectivamente; su definición
-exacta y tolerancias deben documentarse con la norma aplicable.}
+exponencial. IEC 61672-1:2013, apartado 5.8.1, fija como objetivos de diseño
+las constantes de tiempo exponenciales \(0{,}125\,\text{s}\) para F
+(\emph{Fast}) y \(1\,\text{s}\) para S (\emph{Slow}). La conformidad no se
+decide comparando directamente una constante ideal: la norma especifica tasas
+de decaimiento y límites de aceptación, y IEC 61672-2:2013, apartado 9.11,
+describe su ensayo con señales eléctricas sinusoidales~\cite{iec61672_1_2013,iec61672_2_2013}.
 
 Un nivel máximo \(L_{XY\max}\) es el mayor valor alcanzado por un nivel con una
 ponderación frecuencial \(X\) y una ponderación temporal \(Y\) especificadas;
@@ -887,16 +890,18 @@ debe confundirse con \(L_{XY\max}\) ni con una indicación denominada
 \subsection{Verificación del instrumento y ruido de fondo}
 \label{sec:u5-verificacion-sonometro}
 
-La trazabilidad metrológica, la calibración periódica y la comprobación de
-campo no son sinónimos. \verify{El procedimiento, el calibrador, la frecuencia,
-la tolerancia y la periodicidad deben tomarse de normas y documentación
-oficiales aplicables al instrumento y a la medición.}
+La evaluación de modelo, los ensayos periódicos y la comprobación de campo no
+son sinónimos. IEC 61672-2:2013 especifica ensayos de evaluación de modelo,
+mientras que IEC 61672-3:2013 establece un conjunto limitado de ensayos
+periódicos. El procedimiento, el calibrador, la frecuencia, la tolerancia y la
+periodicidad deben tomarse de normas y documentación oficiales aplicables al
+instrumento y a la medición~\cite{iec61672_1_2013,iec61672_2_2013,iec61672_3_2013}.
 
 En una sala destinada a audiometría no debe emplearse un único límite universal
-en dB(A). \verify{Los niveles máximos admisibles de ruido ambiente dependen de
+en dB(A). Los niveles máximos admisibles de ruido ambiente dependen de
 la banda de frecuencia, el transductor, el intervalo de frecuencias de prueba
 y el nivel mínimo que se pretende medir; deben citarse desde la norma
-audiométrica y la jurisdicción adoptadas.} El desarrollo arquitectónico de
+audiométrica y la jurisdicción adoptadas~\cite{iso8253_1_2010,ansiS31_2023}. El desarrollo arquitectónico de
 cabinas corresponde al capítulo sobre propagación y aislamiento.
 
 \subsection{Ejemplo resuelto: promedio energético}
@@ -936,9 +941,9 @@ contribución energética mucho mayor.
     global de una aplicación de teléfono no reemplaza ese procedimiento.
 \end{itemize}
 
-\verify{Toda asociación entre parámetros espectrales de voz, hallazgos
+Toda asociación entre parámetros espectrales de voz, hallazgos
 auditivos, ajuste de dispositivos y decisiones clínicas debe sustentarse en
-fuentes especializadas y delimitar qué mide cada procedimiento.}
+fuentes especializadas y delimitar qué mide cada procedimiento~\cite{brockmann2011}.
 
 \section{Errores frecuentes}
 \label{sec:u5-errores-frecuentes}
